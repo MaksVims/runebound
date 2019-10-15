@@ -13,7 +13,7 @@
       "type": "weapon",
       "cost": 8,
       "value": 1,
-      "ability": "magic",
+      "ability": "spirit",
       "token": "б07"
     },
     {
@@ -30,7 +30,7 @@
       "type": "equipment",
       "cost": 6,
       "value": 1,
-      "ability": "force",
+      "ability": "body",
       "token": "б03"
     },
     {
@@ -46,7 +46,76 @@
       "type": "goods",
       "cost": 0,
       "marketValue": 4
-    }
+    },
+    {
+      "id": 7,
+      "title": "Боевое одеяние",
+      "type": "armor",
+      "cost": 9,
+      "token": "а11"
+    },
+    {
+      "id": 8,
+      "title": "Железные перчатки",
+      "type": "armor",
+      "cost": 7,
+      "value": 1,
+      "ability": "body",
+      "token": "д11"
+    },
+    {
+      "id": 9,
+      "title": "Сюртук торгаша",
+      "type": "armor",
+      "cost": 6,
+      "value": 1,
+      "ability": "spirit",
+      "token": "г08"
+    },
+    {
+      "id": 10,
+      "title": "Костяная палочка",
+      "type": "weapon",
+      "cost": 4,
+      "token": "г03"
+    },
+    {
+      "id": 11,
+      "title": "Пестрая палочка",
+      "type": "weapon",
+      "cost": 3,
+      "token": "г02"
+    },
+    {
+      "id": 12,
+      "title": "Пламенная накидка",
+      "type": "move",
+      "cost": 3
+    },
+    {
+      "id": 13,
+      "title": "Припасы",
+      "type": "goods",
+      "cost": 0,
+      "value": -1,
+      "ability": "move",
+      "marketValue": 3
+    },
+    {
+      "id": 13,
+      "title": "Сума",
+      "type": "equipment",
+      "cost": 2,
+      "value": 1,
+      "ability": "move"ы
+    },
+    {
+      "id": 14,
+      "title": "Камень странствий",
+      "type": "equipment",
+      "cost": 8,
+      "token": "д03"
+    },
   ],
   "quests": [
     {
@@ -98,7 +167,117 @@
       "id": 10,
       "title": "Дела семейные",
       "type": "violet"
-    }
+    },
+    {
+      "id": 11,
+      "title": "Охота на зверя",
+      "type": "green"
+    },
+    {
+      "id": 12,
+      "title": "Чужое барахло",
+      "type": "green"
+    },
+    {
+      "id": 13,
+      "title": "Просьба графа",
+      "type": "green"
+    },
+    {
+      "id": 14,
+      "title": "Тени в ночи",
+      "type": "green"
+    },
+    {
+      "id": 15,
+      "title": "Магическая буря",
+      "type": "green"
+    },
+    {
+      "id": 16,
+      "title": "Кастелян",
+      "type": "green"
+    },
+    {
+      "id": 17,
+      "title": "Праздник весны",
+      "type": "green"
+    },
+    {
+      "id": 18,
+      "title": "Отчаявшийся торговец",
+      "type": "green"
+    },
+    {
+      "id": 19,
+      "title": "Благословление Керноса",
+      "type": "green"
+    },
+    {
+      "id": 20,
+      "title": "Спокойное озеро",
+      "type": "green"
+    },
+    {
+      "id": 21,
+      "title": "Зверолюд",
+      "type": "orange"
+    },
+    {
+      "id": 22,
+      "title": "Эттин",
+      "type": "orange"
+    },
+    {
+      "id": 23,
+      "title": "Колдун",
+      "type": "orange"
+    },
+    {
+      "id": 24,
+      "title": "Дым вдалеке",
+      "type": "orange"
+    },
+    {
+      "id": 25,
+      "title": "Разбойники с большой дороги",
+      "type": "orange"
+    },
+    {
+      "id": 26,
+      "title": "Великан",
+      "type": "orange"
+    },
+    {
+      "id": 27,
+      "title": "Лунный кот",
+      "type": "orange"
+    },
+    {
+      "id": 28,
+      "title": "Разбой на дороге",
+      "type": "orange"
+    },
+    {
+      "id": 29,
+      "title": "Кровь сильных",
+      "type": "orange"
+    },
+    {
+      "id": 30,
+      "title": "Охотничий отряд",
+      "type": "orange"
+    },
+    {
+      "id": 31,
+      "title": "Орк-разбойник",
+      "type": "orange"
+    },
+    {
+      "id": 32,
+      "title": "Бритвокрыл",
+      "type": "orange"
+    },
   ],
   "heroes": [
     {
@@ -107,9 +286,181 @@
       "move": 3,
       "health": 8,
       "skillsCards": 4,
-      "force": 0,
-      "magic": 2,
+      "body": 0,
+      "mind": 3,
+      "spirit": 2,
+      "startMoney": 2,
       "tokens": ["base_11", "base_12", "base_13"]
+    },
+    {
+      "id": 2,
+      "title": "Лорд Хоторн",
+      "move": 3,
+      "health": 9,
+      "skillsCards": 3,
+      "body": 3,
+      "mind": 1,
+      "spirit": 1,
+      "startMoney": 3,
+      "tokens": ["base_21", "base_22", "base_23"]
+    },
+    {
+      "id": 3,
+      "title": "Старейшина Мок",
+      "move": 3,
+      "health": 9,
+      "skillsCards": 3,
+      "body": 2,
+      "mind": 1,
+      "spirit": 2,
+      "startMoney": 2,
+      "tokens": ["base_31", "base_32", "base_33"]
+    },
+    {
+      "id": 4,
+      "title": "Лисса",
+      "move": 3,
+      "health": 9,
+      "skillsCards": 3,
+      "body": 2,
+      "mind": 2,
+      "spirit": 2,
+      "startMoney": 1,
+      "tokens": ["base_41", "base_42", "base_43"]
+    },
+    {
+      "id": 5,
+      "title": "Корбин",
+      "move": 3,
+      "health": 10,
+      "skillsCards": 3,
+      "body": 3,
+      "mind": 2,
+      "spirit": 0,
+      "startMoney": 2,
+      "tokens": ["base_51", "base_52", "base_53"]
+    },
+    {
+      "id": 6,
+      "title": "Лорел из Кровавого леса",
+      "move": 3,
+      "health": 8,
+      "skillsCards": 4,
+      "body": 2,
+      "mind": 2,
+      "spirit": 1,
+      "startMoney": 2,
+      "tokens": ["base_61", "base_62", "base_63"]
     }
+  ],
+  "skills": [
+    {
+      "id": 1,
+      "title": "Чучельник",
+      "type": "body",
+      "cost": {
+        "any": 1
+      }
+    },
+    {
+      "id": 2,
+      "title": "Непоколебимость",
+      "type": "body",
+      "cost": {
+        "any": 3,
+        "orange": 1
+      },
+      "ability": "health",
+      "value": 3
+    },
+    {
+      "id": 3,
+      "title": "Меткость",
+      "type": "body",
+      "cost": {
+        "any": 1,
+        "orange": 1
+      }
+    },
+    {
+      "id": 4,
+      "title": "Амбидекстр",
+      "type": "body",
+      "cost": {
+        "any": 3
+      }
+    },
+    {
+      "id": 5,
+      "title": "Хитрость",
+      "type": "mind",
+      "cost": {
+        "any": 3
+      },
+      "ability": "mind",
+      "value": 2
+    },
+    {
+      "id": 6,
+      "title": "Полная уверенность",
+      "type": "mind",
+      "cost": {
+        "any": 1,
+        "orange": 1
+      }
+    },
+    {
+      "id": 7,
+      "title": "Мания величия",
+      "type": "mind",
+      "cost": {
+        "any": 1
+      }
+    },
+    {
+      "id": 8,
+      "title": "Цельное прикосновение",
+      "type": "spirit",
+      "cost": {
+        "any": 2
+      }
+    },
+    {
+      "id": 9,
+      "title": "Хождение по воде",
+      "type": "spirit",
+      "cost": {
+        "green": 1
+      }
+    },
+    {
+      "id": 10,
+      "title": "Ария войны",
+      "type": "spirit",
+      "cost": {
+        "any": 1,
+        "orange": 1,
+        "violet": 1
+      },
+      "ability": "x health x = spirit"
+    },
+    {
+      "id": 11,
+      "title": "Хождение по воде",
+      "type": "spirit",
+      "cost": {
+        "green": 1
+      }
+    },
+    {
+      "id": 12,
+      "title": "Стремление к магии",
+      "type": "spirit",
+      "cost": {
+        "any": 2
+      },
+      "ability": ["spirit", "mind"],
+      "value": [2, -1]
+    },
   ]
 }
