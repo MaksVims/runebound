@@ -3,7 +3,7 @@
     <h2>Выбери игрового персонажа</h2>
     <div class="hero-list">
       <article class="hero-card--choise" v-for="hero of getHeroes" :key="hero.id">
-        <img :src='`/img/content/heroes/hero_${hero.id}.png`' :alt="hero.name" class="hero-item">
+        <img :src='`/img/content/heroes/hero_${hero.id}.jpg`' :alt="hero.name" class="hero-item">
         <br>
         <button class="btn green" @click="startGame(hero.id)">Выбрать</button>
       </article>
@@ -47,6 +47,7 @@ export default {
 .hero-item {
   width: 300px;
   height: 150px;
+  border-radius: 5px;
 }
 
 </style>

@@ -2,7 +2,7 @@
   <div>
     <h4>Играем сука</h4>
     <div>Шаблон
-      <img :src="`/img/content/heroes/hero_${game.user.heroId}_game.png`" :alt="game.user.name" class="hero">
+      <img :src="`/img/content/heroes/hero_${game.user.heroId}_game.jpg`" :alt="game.user.name" class="hero">
     </div>
     <div>
 

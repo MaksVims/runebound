@@ -4,6 +4,7 @@
       <transition name="move" mode="appear">
         <img :src="src" :alt="item.title" class="card-hero" v-if="load === true"/>
       </transition>
+      <div class="test"></div>
     </div>
   </article>
 </template>
@@ -22,7 +23,7 @@ export default {
     },
 
     src() {
-      return `/img/content/heroes/hero_${this.item.id}.png`;
+      return `/img/content/heroes/hero_${this.item.id}.jpg`;
     },
   },
 
@@ -48,14 +49,26 @@ $color: #6ca86a;
   opacity: 1;
 }
 
+.card-item--inner {
+  position: relative;
+}
+
 .card-hero {
   width: 550px;
   height: 350px;
+  border-radius: 15px;
   transition: all .1s linear .2s;
   cursor: pointer;
 
   &:hover {
     transform: scale(1.1);
+  }
+
+  .test {
+    width: 100%;
+    height: 100%;
+    border: 4px solid red;
+    position: absolute;
   }
 }
 </style>
