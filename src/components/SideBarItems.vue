@@ -28,6 +28,11 @@ export default {
 </script>
 
 <style lang="scss">
+.sidebar-list {
+  overflow-y: auto;
+  height: 80%;
+}
+
 .coll-item {
 
   a {
