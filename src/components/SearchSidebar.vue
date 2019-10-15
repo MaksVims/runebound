@@ -8,19 +8,19 @@
 <script>
 export default {
   model: {
-    prop: 'value',
-    event: 'search',
+    prop: "value",
+    event: "search"
   },
 
   props: {
-    value: String,
+    value: String
   },
 
   methods: {
     search() {
-      this.$emit('search', event.target.value);
-    },
-  },
+      this.$emit("search", event.target.value);
+    }
+  }
 };
 </script>
 
@@ -28,5 +28,9 @@ export default {
 .filterName {
   width: 90%;
   margin-top: 15px;
+}
+#searchSidebar {
+  font-family: 'Caveat', cursive;
+  font-size: 20px;
 }
 </style>

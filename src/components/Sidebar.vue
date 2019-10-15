@@ -77,7 +77,7 @@ export default {
   padding: 20px 15px;
   border-radius: 10px;
   z-index: 4;
-  max-height: 80vh;
+  height: 80vh;
 
   h4 {
     text-align: center;
