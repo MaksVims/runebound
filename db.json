@@ -102,7 +102,7 @@
       "marketValue": 3
     },
     {
-      "id": 13,
+      "id": 14,
       "title": "Сума",
       "type": "equipment",
       "cost": 2,
@@ -110,7 +110,7 @@
       "ability": "move"
     },
     {
-      "id": 14,
+      "id": 15,
       "title": "Камень странствий",
       "type": "equipment",
       "cost": 8,

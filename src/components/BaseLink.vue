@@ -28,7 +28,7 @@ export default {
 a {
   display: block;
   padding: 5px 10px;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .active {

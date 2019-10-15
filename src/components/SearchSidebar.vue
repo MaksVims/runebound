@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="filterName">
     <input placeholder="Поиск..." id="searchSidebar" type="text" class="validate" @input="search" />
   </div>
 </template>
@@ -23,3 +23,10 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+.filterName {
+  width: 90%;
+  margin-top: 15px;
+}
+</style>

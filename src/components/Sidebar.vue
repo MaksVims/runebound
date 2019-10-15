@@ -72,15 +72,21 @@ export default {
 
 <style lang="scss">
 .sidebar {
-  width: 30%;
+  width: 35%;
   background: #fff;
-  padding: 10px;
+  padding: 20px 15px;
   border-radius: 10px;
-  z-index: 2;
+  z-index: 4;
+  max-height: 80vh;
 
-  max-height: 700px;
+  h4 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  input {
+    margin-bottom: 10px;
+  }
 }
 
-.thumb {
-}
 </style>

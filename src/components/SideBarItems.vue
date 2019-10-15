@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar-list">
+  <div class="sidebar-list" :class="path">
     <ul class="collection">
       <router-link
       v-for="item of items"
@@ -30,15 +30,23 @@ export default {
 <style lang="scss">
 .sidebar-list {
   overflow-y: auto;
-  height: 80%;
+  height: 78%;
+  margin-top: 10px;
+}
+
+.sidebar-list.items {
+  height: 72%;
 }
 
 .coll-item {
 
-  a {
-    &:hover {
+  &.active {
+    background: #ccc !important;
+  }
 
-    }
+  a {
+    font-size: 20px;
+    color: black;
   }
 }
 </style>

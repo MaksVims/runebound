@@ -9,6 +9,7 @@ h1,h2,h3,h4 {
 
 body {
   font-size: 18px;
+  font-family: $font-family;
 }
 
 .container {
@@ -17,7 +18,7 @@ body {
 }
 
 #logo {
-  font-size: 40px;
+  font-size: 42px;
 
   span {
     display: block;
@@ -25,7 +26,7 @@ body {
 }
 
 #main {
-  margin-top: 30px;
+  margin-top: 40px;
   display: flex;
   justify-content: space-between;
 }
@@ -34,7 +35,6 @@ body {
   height: 100vh;
   background: no-repeat left left;
   background-size: cover;
-
 }
 
 .content {
@@ -50,4 +50,5 @@ body {
 .money-text {
   display: flex;
   align-items: center;
+  margin: 0;
 }
