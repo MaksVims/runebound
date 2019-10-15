@@ -1,10 +1,11 @@
 .card-item {
-  background: url('/img/general/cards-bg.png') no-repeat left top;
+  background: url('/img/general/cards-bg.png') no-repeat center top;
   background-size: contain;
-  min-width: 750px;
+  width: 100%;
   padding: 20px 0;
   margin: 20px 10px;
-  height: 80%;
+  height: 100%;
+  position: relative;
   
   .card {
     margin: 0;
@@ -23,7 +24,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 110px;
+    right: 12%;
   }
 
   .card-item--inner {
@@ -31,7 +32,7 @@
   }
 
   .active {
-    right: 380px;
+    right: 52%;
     opacity: 1;
     transition: all .7s ease;
   }
