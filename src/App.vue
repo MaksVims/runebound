@@ -1,13 +1,11 @@
 <template>
-  <div id="app" style="background: url('/img/general/main-bg.jpg')">
+  <div id="app" style="background: url('/img/general/main-bg-2.jpg')">
     <NavBar />
     <div id="wrapper-main">
       <div class="container">
         <router-view />
       </div>
     </div>
-    <div class="bg-image dragon"></div>
-    <div class="necr bg-image necr"></div>
   </div>
 </template>
 

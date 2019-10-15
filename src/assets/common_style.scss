@@ -32,9 +32,9 @@ body {
 
 #app {
   height: 100vh;
-  background: no-repeat left top;
-  background-size: contain;
-  position: relative;
+  background: no-repeat left left;
+  background-size: cover;
+
 }
 
 .content {
@@ -50,26 +50,4 @@ body {
 .money-text {
   display: flex;
   align-items: center;
-}
-
-.bg-image {
-  position: absolute;
-}
-
-.dragon {
-  background: url(/img/general/dragon.png) no-repeat center center;
-  background-size: contain;
-  bottom: 0px;
-  right: 0;
-  width: 500px;
-  height: 260px;
-}
-
-.necr {
-  background: url(/img/general/necr.png) no-repeat center center;
-  background-size: contain;
-  top: 70px;
-  left: 0;
-  width: 300px;
-  height: 260px;
 }
