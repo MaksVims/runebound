@@ -107,7 +107,7 @@
       "type": "equipment",
       "cost": 2,
       "value": 1,
-      "ability": "move"ы
+      "ability": "move"
     },
     {
       "id": 14,
@@ -115,7 +115,7 @@
       "type": "equipment",
       "cost": 8,
       "token": "д03"
-    },
+    }
   ],
   "quests": [
     {
@@ -277,7 +277,7 @@
       "id": 32,
       "title": "Бритвокрыл",
       "type": "orange"
-    },
+    }
   ],
   "heroes": [
     {
@@ -461,6 +461,6 @@
       },
       "ability": ["spirit", "mind"],
       "value": [2, -1]
-    },
+    }
   ]
 }

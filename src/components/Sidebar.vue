@@ -10,34 +10,34 @@
     </template>
 
     <Search v-model="filter" @search="filter = $event" />
-    <SideBarItems :items="filterItems" :path='path'/>
+    <SideBarItems :items="filterItems" :path="path" />
   </section>
 </template>
 
 <script>
-import Search from '@/components/SearchSidebar';
-import SearchRange from '@/components/SearchSidebarRange';
-import SideBarItems from '@/components/SideBarItems';
-import FilterQuestType from '@/components/FilterQuestType';
+import Search from "@/components/SearchSidebar";
+import SearchRange from "@/components/SearchSidebarRange";
+import SideBarItems from "@/components/SideBarItems";
+import FilterQuestType from "@/components/FilterQuestType";
 
 export default {
   components: {
     Search,
     SideBarItems,
     SearchRange,
-    FilterQuestType,
+    FilterQuestType
   },
 
   props: {
     path: String,
-    title: String,
+    title: String
   },
 
   data() {
     return {
-      filter: '',
+      filter: "",
       cost: 20,
-      type: '',
+      type: ""
     };
   },
 
@@ -46,25 +46,27 @@ export default {
       let items = this.$store.getters.getItems;
       if (this.filter.length) {
         items = items.filter(
-          item => item.title.toLowerCase().indexOf(this.filter.toLowerCase()) !== -1,
+          item =>
+            item.title.toLowerCase().indexOf(this.filter.toLowerCase()) !== -1
         );
       }
-      if (this.path === 'items') items = items.filter(item => item.cost <= this.cost);
-      if (this.type.length > 0 && this.path === 'quests') items = this.filterQuest(items);
+      if (this.path === "items")
+        items = items.filter(item => item.cost <= this.cost);
+      if (this.type.length > 0 && this.path === "quests")
+        items = this.filterQuest(items);
       return items.sort((a, b) => a.title.localeCompare(b.title));
-    },
+    }
   },
 
   created() {
-    this.$store.dispatch('loadItems', this.path);
+    this.$store.dispatch("loadItems", this.path);
   },
 
   methods: {
     filterQuest(items) {
       return items.filter(item => item.type === this.type);
-    },
-  },
-
+    }
+  }
 };
 </script>
 
@@ -75,6 +77,8 @@ export default {
   padding: 10px;
   border-radius: 10px;
   z-index: 2;
+
+  max-height: 700px;
 }
 
 .thumb {
