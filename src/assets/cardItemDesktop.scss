@@ -1,0 +1,34 @@
+.card-item {
+  padding: 20px 0;
+  margin: 20px 10px;
+  height: 80%;
+  display: flex;
+  justify-content: flex-end;
+
+  .card {
+    height: 350px;
+    width: 250px;
+    opacity: 0;
+  }
+
+  .back {
+    height: 360px;
+    width: 260px;
+  }
+
+  .back,
+  .card {
+    position: absolute;
+    right: 0;
+  }
+
+  .card-item--inner {
+    position: relative;
+  }
+
+  .active {
+    right: 280px;
+    opacity: 1;
+    transition: all .7s ease;
+  }
+}

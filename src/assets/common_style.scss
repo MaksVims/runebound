@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+h1,h2,h3,h4 {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 18px;
+}
+
+.container {
+  width: 95%;
+  max-width: 1170px;
+}
+
+#logo {
+  font-size: 40px;
+
+  span {
+    display: block;
+  }
+}
+
+#main {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#app {
+  height: 100vh;
+  background: no-repeat left top;
+  background-size: contain;
+  position: relative;
+}
+
+.content {
+  width: 60%;
+  min-height: 500px;
+}
+
+.icon-money {
+  height: 20px;
+  width: 25px;
+}
+
+.money-text {
+  display: flex;
+  align-items: center;
+}
+
+.bg-image {
+  position: absolute;
+}
+
+.dragon {
+  background: url(/img/general/dragon.png) no-repeat center center;
+  background-size: contain;
+  bottom: 0px;
+  right: 0;
+  width: 500px;
+  height: 260px;
+}
+
+.necr {
+  background: url(/img/general/necr.png) no-repeat center center;
+  background-size: contain;
+  top: 70px;
+  left: 0;
+  width: 300px;
+  height: 260px;
+}

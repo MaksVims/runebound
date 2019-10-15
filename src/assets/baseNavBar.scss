@@ -1,0 +1,16 @@
+.navbar {
+  background: $color-brand;
+  color: #fff;
+  height: 80px;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80px;
+  }
+
+  a {
+    color: #fff;
+  }
+}

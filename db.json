@@ -1,0 +1,115 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "Обсидиановый чешуйчатый доспех",
+      "type": "armor",
+      "cost": 12,
+      "token": "г09"
+    },
+    {
+      "id": 2,
+      "title": "Посох света",
+      "type": "weapon",
+      "cost": 8,
+      "value": 1,
+      "ability": "magic",
+      "token": "б07"
+    },
+    {
+      "id": 3,
+      "title": "Крылатые сапоги",
+      "type": "move",
+      "cost": 3,
+      "ability": "move",
+      "value": 1
+    },
+    {
+      "id": 4,
+      "title": "Когтистая перчатка",
+      "type": "equipment",
+      "cost": 6,
+      "value": 1,
+      "ability": "force",
+      "token": "б03"
+    },
+    {
+      "id": 5,
+      "title": "Артефакты",
+      "type": "goods",
+      "cost": 0,
+      "marketValue": 2
+    },
+    {
+      "id": 6,
+      "title": "Охота за головами",
+      "type": "goods",
+      "cost": 0,
+      "marketValue": 4
+    }
+  ],
+  "quests": [
+    {
+      "id": 1,
+      "title": "Принц воров",
+      "type": "green"
+    },
+    {
+      "id": 2,
+      "title": "Колдунья",
+      "type": "green"
+    },
+    {
+      "id": 3,
+      "title": "Пленных дух",
+      "type": "green"
+    },
+    {
+      "id": 4,
+      "title": "Святилище поллукса",
+      "type": "green"
+    },
+    {
+      "id": 5,
+      "title": "Кобольды",
+      "type": "orange"
+    },
+    {
+      "id": 6,
+      "title": "Попытка ограбления",
+      "type": "orange"
+    },
+    {
+      "id": 7,
+      "title": "Большие проблемы",
+      "type": "orange"
+    },
+    {
+      "id": 8,
+      "title": "Кузнец рун",
+      "type": "violet"
+    },
+    {
+      "id": 9,
+      "title": "Мошенница",
+      "type": "violet"
+    },
+    {
+      "id": 10,
+      "title": "Дела семейные",
+      "type": "violet"
+    }
+  ],
+  "heroes": [
+    {
+      "id": 1,
+      "title": "Mастер Торн",
+      "move": 3,
+      "health": 8,
+      "skillsCards": 4,
+      "force": 0,
+      "magic": 2,
+      "tokens": ["base_11", "base_12", "base_13"]
+    }
+  ]
+}
