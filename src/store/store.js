@@ -1,12 +1,14 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import gameStore from './gameStore';
+import commonCardsStore from './commonCardsStore';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   modules: {
     gameStore,
+    commonCardsStore,
   },
 
   state: {

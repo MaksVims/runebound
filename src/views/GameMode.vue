@@ -7,19 +7,22 @@
 
 <script>
 import startGame from '../Game/startGame';
-import createGame from '../Game/createGame';
+import ChoiceHero from '../Game/ChoiceHero';
 import mainGame from '../Game/mainGame';
+import ChoiceTypeGame from '../Game/ChoiceTypeGame';
 
 export default {
   components: {
     startGame,
-    createGame,
+    ChoiceHero,
+    ChoiceTypeGame,
     mainGame,
   },
 
   computed: {
     getComponent() {
-      if (this.$store.getters.getGameMod && this.$store.getters.getGame === null) return 'createGame';
+      if (this.$store.getters.getGameMod && this.$store.getters.getGame === null && this.$store.getters.getTypeGame === null) return 'ChoiceTypeGame';
+      if (this.$store.getters.getGameMod && this.$store.getters.getGame === null && this.$store.getters.getTypeGame !== null) return 'ChoiceHero';
       if (this.$store.getters.getGameMod && this.$store.getters.getGame !== null) return 'mainGame';
       return 'startGame';
     },

@@ -462,5 +462,17 @@
       "ability": ["spirit", "mind"],
       "value": [2, -1]
     }
+  ],
+  "event" : [
+    {
+      "id": 1,
+      "type": "dragon",
+      "title": "В глубинах Озера слез"
+    },
+    {
+      "id": 2,
+      "type": "dragon",
+      "title": "Видения рассвета"
+    }
   ]
 }

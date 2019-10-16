@@ -1,0 +1,39 @@
+.flip-container {
+  width: 300px;
+  height: 200px;
+  transition: transform .4s linear;
+
+  &:hover {
+    transform: scale(1.4);
+  }
+
+  &.active:hover {
+    transform: scale(1.4);
+  }
+
+}
+
+/* здесь находится скорость перевертывания */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+
+  .front {
+    z-index: 4;
+  }
+
+  .front,
+  .back {
+    backface-visibility: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .back {
+    transform: rotateY(180deg);
+  }
+}

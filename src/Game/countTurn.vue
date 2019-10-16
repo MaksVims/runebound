@@ -1,20 +1,20 @@
 <template>
   <section class="turn">
-    <span>{{turn}}</span>
+    <span>Ход {{turn}}</span>
   </section>
 </template>
 
 <script>
 export default {
-  name: "count Turn",
+  name: 'countTurn',
 
   props: {
     turn: {
       type: Number,
-      required: true
-    }
-  }
-}
+      required: true,
+    },
+  },
+};
 </script>
 
 <style lang="scss">

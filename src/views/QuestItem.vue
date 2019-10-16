@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import CardItemAnimate from "../mixins/cardItemAnimate";
+import CardItemAnimate from '../mixins/cardItemAnimate';
 
 export default {
   mixins: [CardItemAnimate],
@@ -18,8 +18,8 @@ export default {
 
     getBackCard() {
       return `/img/content/cards_back/${this.item.type}_q.png`;
-    }
-  }
+    },
+  },
 };
 </script>
 
