@@ -1,12 +1,25 @@
 <template>
   <div>
     <h3>Состояние игрока</h3>
-    <countTurn :turn='game.turn'/>
-    <div>
-      <img :src="`/img/content/heroes/hero_${game.user.heroId}_game.png`" :alt="game.user.name" class="hero">
-    </div>
-    <section class="top">
-      <heroCard :hero='game.user.hero'/>
+    <section class="game-top">
+      <CountTurn :turn='game.turn' />
+      <TypeGame />
+      <GlobalEvent />
+    </section>
+
+    <section class="game-middle">
+      <HeroCard :hero='getHeroStats'/>
+      <Trophies />
+      <div class="all-skills">
+        <Skills />
+        <LearnedSkills />
+      </div>
+    </section>
+
+    <section class="game-bottom">
+      <Tokens />
+      <Money />
+      <Inventory />
     </section>
     
     <button class="btn" @click="game.turn += 1">Конец хода</button>
@@ -15,14 +28,30 @@
 
 
 <script>
-import countTurn from './countTurn';
-import heroCard from './heroCard';
+import CountTurn from './countTurn';
+import HeroCard from './heroCard';
+import Trophies from './Trophies';
+import Skills from './Skills';
+import LearnedSkills from './LearnedSkills';
+import Tokens from './Tokens';
+import Money from './Money';
+import Inventory from './Inventory';
+import GlobalEvent from './GlobalEvent';
+import TypeGame from './TypeGame';
 
 
 export default {
   components: {
-    countTurn,
-    heroCard
+    CountTurn,
+    HeroCard,
+    Trophies,
+    Skills,
+    LearnedSkills,
+    Tokens,
+    Money,
+    Inventory,
+    GlobalEvent,
+    TypeGame
   },
 
   data() {
@@ -31,14 +60,36 @@ export default {
     };
   },
 
+  computed: {
+    getHeroStats() {
+      const hero = {
+        id: this.game.user.heroId,
+        title: this.game.user.name,
+        ...this.game.user.hero,
+      }
+      return hero;
+    }
+  },
+
 };
 </script>
 
 <style lang="scss">
+.game-middle {
+  display: flex;
 
-.hero {
-  width: 300px;
-  height: 150px;
+
+  .all-skills {
+    flex-basis: 50%;
+  }
+}
+
+.game-bottom {
+  display: flex;
+}
+
+.game-top {
+  display: flex;
 }
 
 </style>

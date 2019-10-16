@@ -28,5 +28,6 @@ export default {
 @import "@/assets/common_style.scss";
 @import "@/assets/baseNavBar.scss";
 @import "@/assets/cardItemDesktop.scss";
+@import '@/assets/game_mode.scss';
 @import "~materialize-css/dist/css/materialize.min.css";
 </style>

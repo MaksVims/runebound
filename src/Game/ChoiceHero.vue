@@ -42,16 +42,6 @@ export default {
 </script>
 
 <style lang="scss">
-#createGame {
-  h2 {
-    margin-bottom: 60px;
-    color: #fff;
-  }
-
-  button {
-    font-family: 'Caveat', cursive;
-  }
-}
 
 .hero-list {
   display: flex;

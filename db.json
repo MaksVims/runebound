@@ -462,5 +462,11 @@
       "ability": ["spirit", "mind"],
       "value": [2, -1]
     }
+  ],
+  "event" : [
+    {
+      "id": 1,
+      
+    }
   ]
 }
