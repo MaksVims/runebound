@@ -1,74 +1,31 @@
 <template>
   <div>
     <h3>Состояние игрока</h3>
-    <section class="game-top">
-      <CountTurn :turn='game.turn' />
-      <TypeGame />
-      <GlobalEvent />
-    </section>
+    <GameTop :game='game'/>
+    <GameMiddle :game='game'/>
+    <GameBottom :game='game'/>
 
-    <section class="game-middle">
-      <HeroCard :hero='getHeroStats'/>
-      <Trophies />
-      <div class="all-skills">
-        <Skills />
-        <LearnedSkills />
-      </div>
-    </section>
-
-    <section class="game-bottom">
-      <Tokens />
-      <Money />
-      <Inventory />
-    </section>
-    
     <button class="btn" @click="game.turn += 1">Конец хода</button>
   </div>
 </template>
 
 
 <script>
-import CountTurn from './countTurn';
-import HeroCard from './heroCard';
-import Trophies from './Trophies';
-import Skills from './Skills';
-import LearnedSkills from './LearnedSkills';
-import Tokens from './Tokens';
-import Money from './Money';
-import Inventory from './Inventory';
-import GlobalEvent from './GlobalEvent';
-import TypeGame from './TypeGame';
-
+import GameTop from './GameTop';
+import GameMiddle from './GameMiddle';
+import GameBottom from './GameBottom';
 
 export default {
   components: {
-    CountTurn,
-    HeroCard,
-    Trophies,
-    Skills,
-    LearnedSkills,
-    Tokens,
-    Money,
-    Inventory,
-    GlobalEvent,
-    TypeGame
+    GameTop,
+    GameMiddle,
+    GameBottom,
   },
 
   data() {
     return {
       game: this.$store.getters.getGame,
     };
-  },
-
-  computed: {
-    getHeroStats() {
-      const hero = {
-        id: this.game.user.heroId,
-        title: this.game.user.name,
-        ...this.game.user.hero,
-      }
-      return hero;
-    }
   },
 
 };
