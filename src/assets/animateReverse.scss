@@ -1,10 +1,4 @@
 .flip-container {
-  perspective: 1000;
-}
-/* переверните сторону при проведении мышью */
-
-
-.flip-container {
   width: 300px;
   height: 200px;
   transition: transform .4s linear;
@@ -16,7 +10,7 @@
   &.active:hover {
     transform: scale(1.4);
   }
-  
+
 }
 
 /* здесь находится скорость перевертывания */
@@ -25,24 +19,21 @@
   transform-style: preserve-3d;
 
   position: relative;
-}
 
-/* скройте обратную сторону во время переворота */
-.front,
-.back {
-  backface-visibility: hidden;
+  .front {
+    z-index: 4;
+  }
 
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+  .front,
+  .back {
+    backface-visibility: hidden;
 
-/* лицевая сторона размещена над обратной */
-.front {
-  z-index: 2;
-}
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
 
-/* обратная, изначально скрытая сторона */
-.back {
-  transform: rotateY(180deg);
+  .back {
+    transform: rotateY(180deg);
+  }
 }
