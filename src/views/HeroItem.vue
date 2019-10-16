@@ -10,7 +10,7 @@
 export default {
   data() {
     return {
-      load: false
+      load: false,
     };
   },
 
@@ -21,12 +21,12 @@ export default {
 
     src() {
       return `/img/content/heroes/hero_${this.item.id}.jpg`;
-    }
+    },
   },
 
   mounted() {
     setTimeout(() => (this.load = true), 200);
-  }
+  },
 };
 </script>
 

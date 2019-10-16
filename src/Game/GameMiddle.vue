@@ -10,24 +10,24 @@
 </template>
 
 <script>
-import HeroCard from "./heroCard";
-import Trophies from "./Trophies";
-import Skills from "./Skills";
-import LearnedSkills from "./LearnedSkills";
+import HeroCard from './heroCard';
+import Trophies from './Trophies';
+import Skills from './Skills';
+import LearnedSkills from './LearnedSkills';
 
 export default {
   components: {
     HeroCard,
     Trophies,
     Skills,
-    LearnedSkills
+    LearnedSkills,
   },
 
   props: {
     game: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
 
   computed: {
@@ -35,10 +35,10 @@ export default {
       const hero = {
         id: this.game.user.heroId,
         title: this.game.user.name,
-        ...this.game.user.hero
+        ...this.game.user.hero,
       };
       return hero;
-    }
-  }
+    },
+  },
 };
 </script>

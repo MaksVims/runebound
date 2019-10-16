@@ -10,13 +10,13 @@
 
 <script>
 export default {
-  name: "heroCard",
+  name: 'heroCard',
   props: {
     hero: {
       type: Object,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 };
 </script>
 

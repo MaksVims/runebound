@@ -21,7 +21,7 @@ export default {
 
   computed: {
     getComponent() {
-      if (this.$store.getters.getGameMod && this.$store.getters.getGame === null && this.$store.getters.getTypeGame === null) return 'ChoiceTypeGame'
+      if (this.$store.getters.getGameMod && this.$store.getters.getGame === null && this.$store.getters.getTypeGame === null) return 'ChoiceTypeGame';
       if (this.$store.getters.getGameMod && this.$store.getters.getGame === null && this.$store.getters.getTypeGame !== null) return 'ChoiceHero';
       if (this.$store.getters.getGameMod && this.$store.getters.getGame !== null) return 'mainGame';
       return 'startGame';

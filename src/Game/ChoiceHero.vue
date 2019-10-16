@@ -12,32 +12,32 @@
 </template>
 
 <script>
-import Game from "../script/Game";
+import Game from '../script/Game';
 
 export default {
   data() {
     return {
-      heroes: []
+      heroes: [],
     };
   },
 
   computed: {
     getHeroes() {
       return this.$store.getters.getItems;
-    }
+    },
   },
 
   created() {
-    this.$store.dispatch("loadItems", "heroes");
+    this.$store.dispatch('loadItems', 'heroes');
   },
 
   methods: {
     startGame(id) {
       const hero = this.getHeroes.find(hero => hero.id === id);
       console.log(new Game(hero));
-      this.$store.commit("startGame", new Game(hero));
-    }
-  }
+      this.$store.commit('startGame', new Game(hero));
+    },
+  },
 };
 </script>
 

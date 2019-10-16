@@ -7,22 +7,24 @@
 </template>
 
 <script>
-import CountTurn from "./countTurn";
-import GlobalEvent from "./GlobalEvent";
-import TypeGame from "./TypeGame";
+import CountTurn from './countTurn';
+import GlobalEvent from './GlobalEvent';
+import TypeGame from './TypeGame';
 
 export default {
   components: {
     CountTurn,
     GlobalEvent,
-    TypeGame
+    TypeGame,
   },
 
   props: {
     game: {
       type: Object,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
+
+
 };
 </script>

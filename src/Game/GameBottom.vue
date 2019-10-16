@@ -7,22 +7,22 @@
 </template>
 
 <script>
-import Tokens from "./Tokens";
-import Money from "./Money";
-import Inventory from "./Inventory";
+import Tokens from './Tokens';
+import Money from './Money';
+import Inventory from './Inventory';
 
 export default {
   components: {
     Tokens,
     Money,
-    Inventory
+    Inventory,
   },
 
   props: {
     game: {
       type: Object,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 };
 </script>

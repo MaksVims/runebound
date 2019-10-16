@@ -6,15 +6,15 @@
 
 <script>
 export default {
-  name: "countTurn",
+  name: 'countTurn',
 
   props: {
     turn: {
       type: Number,
-      required: true
-    }
-  }
-}
+      required: true,
+    },
+  },
+};
 </script>
 
 <style lang="scss">

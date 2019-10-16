@@ -4,7 +4,7 @@
     <div class="typeGame-list">
       <article class="typeGame-choise" v-for="(type,idx) of types" :key="idx">
         <img
-          :src="`/img/content/typeGame/type.png`"
+          :src="`/img/content/typeGame/${type}_1.png`"
           :alt="type"
           class="typeGame-item"
           @dblclick="startGame(type)"
@@ -22,15 +22,15 @@
 export default {
   data() {
     return {
-      types: ['necromant', 'dragon']
+      types: ['necromant', 'dragon'],
     };
   },
 
   methods: {
     startGame(type) {
-      this.$store.commit("setTypeGame", type);
-    }
-  }
+      this.$store.commit('setTypeGame', type);
+    },
+  },
 };
 </script>
 

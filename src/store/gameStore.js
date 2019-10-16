@@ -3,6 +3,10 @@ export default {
     gamemod: false,
     game: null,
     typeGame: null,
+
+    usedGlobalEvent: [],
+    usedSkills: [],
+    usedItems: [],
   },
 
   getters: {
