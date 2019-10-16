@@ -2,10 +2,10 @@ import Hero from './Hero';
 
 export default class User {
   constructor({
-    id, title, move, health, skillsCards, force, magic, tokens,
+    id, title, move, health, skillsCards, body, mind, spirit, tokens, startMoney,
   }) {
     this.heroId = id;
-    this.hero = new Hero(health, move, skillsCards, force, magic);
+    this.hero = new Hero(health, move, skillsCards, body, mind, spirit);
     this.name = title;
 
     this.learnedSkills = [];
@@ -13,6 +13,6 @@ export default class User {
     this.items = [];
     this.tokens = tokens;
 
-    this.money = 2;
+    this.money = startMoney;
   }
 }
