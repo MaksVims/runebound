@@ -3,7 +3,7 @@
     <h2>Выбери игрового персонажа</h2>
     <div class="hero-list">
       <article class="hero-card--choise" v-for="hero of getHeroes" :key="hero.id">
-        <img :src="`/img/content/heroes/hero_${hero.id}.jpg`" :alt="hero.name" class="hero-item" @click="startGame(hero.id)"/>
+        <img :src="`/img/content/heroes/hero_${hero.id}.jpg`" :alt="hero.name" class="hero-item" @dblclick="startGame(hero.id)"/>
         <br />
         <button class="btn green" @click="startGame(hero.id)">Выбрать</button>
       </article>

@@ -3,8 +3,11 @@
     <h3>Состояние игрока</h3>
     <countTurn :turn='game.turn'/>
     <div>
-      <img :src="`/img/content/heroes/hero_${game.user.heroId}_game.jpg`" :alt="game.user.name" class="hero">
+      <img :src="`/img/content/heroes/hero_${game.user.heroId}_game.png`" :alt="game.user.name" class="hero">
     </div>
+    <section class="top">
+      <heroCard :hero='game.user.hero'/>
+    </section>
     
     <button class="btn" @click="game.turn += 1">Конец хода</button>
   </div>
@@ -13,19 +16,21 @@
 
 <script>
 import countTurn from './countTurn';
+import heroCard from './heroCard';
 
 
 export default {
   components: {
-    countTurn
+    countTurn,
+    heroCard
   },
-
 
   data() {
     return {
       game: this.$store.getters.getGame,
     };
   },
+
 };
 </script>
 
