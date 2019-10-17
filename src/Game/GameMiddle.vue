@@ -2,9 +2,9 @@
   <section class="game-middle">
     <HeroCard :hero="getHeroStats" />
     <Trophies />
-    <div class="all-skills">
+    <div class="current-skills-and-quests">
+      <CurrentQuests />
       <Skills />
-      <LearnedSkills />
     </div>
   </section>
 </template>
@@ -13,14 +13,14 @@
 import HeroCard from './heroCard';
 import Trophies from './Trophies';
 import Skills from './Skills';
-import LearnedSkills from './LearnedSkills';
+import CurrentQuests from './CurrentQuests'
 
 export default {
   components: {
     HeroCard,
     Trophies,
     Skills,
-    LearnedSkills,
+    CurrentQuests,
   },
 
   props: {

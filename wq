@@ -1,0 +1,24 @@
+[33mfc9d9f8[m[33m ([m[1;36mHEAD -> [m[1;32mgame[m[33m)[m created popup and decompozition flipperComponent
+[33m59efec2[m test eventEmmiter -begin
+[33mf45988e[m[33m ([m[1;32mmaster[m[33m)[m changed option editorconfig
+[33m68195ae[m[33m ([m[1;31morigin/master[m[33m)[m optimization vuex mutation
+[33m1d7cabe[m Merge branch 'game'
+[33m84b360d[m update day
+[33m70c27a0[m added flip animation card choiseTypeGame
+[33md88c2c7[m added ok path changedTypesGame and created logic fill event block
+[33m7bcf52e[m decompose mainGame component -> GameTop, GameMiddle, GameBottom
+[33mcd71e3b[m create main component this gameMode and added new Screen choice typeGame
+[33m9220b6a[m added new img items
+[33m3381d45[m create component heroCard
+[33mdc3f3a9[m added countTurn component, created and stylized createGame component
+[33ma151b33[m update background general image
+[33m84c84ed[m[33m ([m[1;32msidebar[m[33m)[m stylized sidebar and adding google font to index.html, changed fontsize navbar, sidebar
+[33md47a5ba[m[33m ([m[1;32mcommon_style[m[33m)[m debugging style -> location cardItem in content block
+[33m751ac55[m Merge branch 'common_style'
+[33me72b5da[m Merge branch 'sidebar'
+[33m5ffbe5d[m install bg-card
+[33mf91c6b8[m update main image background
+[33mfcc5fa9[m[33m ([m[1;32mheroes[m[33m)[m added image heroes and new bg, update path imgs is png -> jpg
+[33mac97ab6[m sidebar, sidebaritems update scss style - overflow and max-height
+[33m8d61be8[m update database new items
+[33m42a58d6[m first commit application
