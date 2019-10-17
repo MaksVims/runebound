@@ -35,22 +35,23 @@
 export default {
   data() {
     return {
-      types: ["necromant", "dragon"]
+      types: ['necromant', 'dragon'],
     };
   },
 
+
   methods: {
     startGame(type) {
-      this.$store.commit("setTypeGame", type);
+      this.$store.commit('setTypeGame', type);
     },
 
     toggleClass(event) {
-      let target = event.target.closest(".flip-container");
+      const target = event.target.closest('.flip-container');
       if (target) {
-        target.classList.toggle("active");
+        target.classList.toggle('active');
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

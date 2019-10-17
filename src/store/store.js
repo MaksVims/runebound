@@ -6,6 +6,7 @@ import commonCardsStore from './commonCardsStore';
 Vue.use(Vuex);
 
 export default new Vuex.Store({
+  strict: true,
   modules: {
     gameStore,
     commonCardsStore,
@@ -14,16 +15,18 @@ export default new Vuex.Store({
   state: {
     items: [],
   },
+
   getters: {
     getItems: state => state.items,
     getItemsById: state => id => state.items.find(item => item.id === id),
   },
+
   mutations: {
     setItems(state, items) {
       state.items = items;
     },
-
   },
+
   actions: {
     loadItems({ commit }, path) {
       fetch(`http://localhost:3000/${path}`)

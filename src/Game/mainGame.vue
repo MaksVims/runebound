@@ -12,41 +12,35 @@
 
 <script>
 import randomElement from '../script/randomElement';
-import GameTop from "./GameTop";
-import GameMiddle from "./GameMiddle";
-import GameBottom from "./GameBottom";
+import GameTop from './GameTop';
+import GameMiddle from './GameMiddle';
+import GameBottom from './GameBottom';
 
 export default {
   components: {
     GameTop,
     GameMiddle,
-    GameBottom
+    GameBottom,
   },
 
   data() {
     return {
-      game: this.$store.getters.getGame
+      game: this.$store.getters.getGame,
     };
-  },
-
-  created() {
-    this.$store.dispatch("loadCards", { path: "items", type: "setAllItems" });
-    this.$store.dispatch("loadCards", { path: "quests", type: "setQuests" });
-    this.$store.dispatch("loadCards", { path: "skills", type: "setSkills" });
-    this.$store.dispatch("loadCards", { path: "event", type: "setEvents" });
   },
 
   methods: {
     nextTurn() {
       const eventTurn = [3, 6, 9, 12, 15, 18, 21, 24];
-      this.game.turn += 1;
+      this.$store.commit('callMethodGame', {method: 'nextTurn'})
       if (eventTurn.includes(this.game.turn)) {
         const randomEvent = randomElement(this.$store.getters.getAllEvents);
-        this.game.createEvent(randomEvent);
-        this.$store.commit('addedUsedCards', {type: 'usedGlobalEvents', item: randomEvent})
+        // Todo -- не изменяет state игры через мутацию
+        this.$store.commit('callMethodGame', {method: 'createEvent', value: randomEvent})
+        this.$store.commit('addedUsedCards', { type: 'usedGlobalEvents', item: randomEvent });
       }
     },
-  }
+  },
 };
 </script>
 

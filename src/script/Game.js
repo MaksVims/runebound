@@ -10,4 +10,8 @@ export default class Game {
   createEvent(event) {
     this.globalEvent.push(event);
   }
+
+  nextTurn() {
+    this.turn += 1;
+  }
 }

@@ -1,6 +1,6 @@
 <template>
   <article class="card-item card-item-hero">
-    <transition name="move" mode="appear">
+    <transition name="move">
       <img :src="src" :alt="item.title" class="card-hero" v-if="load === true" />
     </transition>
   </article>

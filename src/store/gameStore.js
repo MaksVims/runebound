@@ -3,10 +3,6 @@ export default {
     gamemod: false,
     game: null,
     typeGame: null,
-
-    usedGlobalEvent: [],
-    usedSkills: [],
-    usedItems: [],
   },
 
   getters: {
@@ -26,6 +22,10 @@ export default {
 
     setTypeGame(state, type) {
       state.typeGame = type;
+    },
+
+    callMethodGame(state, { method, value = null }) {
+      state.game[method](value);
     },
   },
 

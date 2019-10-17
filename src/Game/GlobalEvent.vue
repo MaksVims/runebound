@@ -2,10 +2,10 @@
   <article class="game-globalEvent">
     <p>Глобальное событие</p>
     <div class="game-globalEvent--content">
-      <img 
-      :src="`/img/content/globalEvent/${event.type}_${event.id}.png`" 
-      :alt="event.title" 
-      v-for='event of events' 
+      <img
+      :src="`/img/content/globalEvent/${event.type}_${event.id}.png`"
+      :alt="event.title"
+      v-for='event of events'
       :key="event.id"
       class="card-event"
       >

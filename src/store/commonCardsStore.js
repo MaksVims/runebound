@@ -13,28 +13,26 @@ export default {
 
   getters: {
     getAllSkills(state) {
-      return state.allSkills.filter(skill => {
+      return state.allSkills.filter((skill) => {
         if (state.usedSkills.length) {
-          for (let usedSkill of state.usedSkills) {
+          for (const usedSkill of state.usedSkills) {
             if (usedSkill.id === skill.id) return false;
           }
           return skill;
-        } else {
-          return skill;
         }
-      })
+        return skill;
+      });
     },
     getAllEvents(state) {
-      return state.allEvents.filter(event => {
+      return state.allEvents.filter((event) => {
         if (state.usedGlobalEvents.length) {
-          for (let usedEvent of state.usedGlobalEvents) {
+          for (const usedEvent of state.usedGlobalEvents) {
             if (usedEvent.id === event.id) return false;
           }
           return event;
-        } else {
-          return event;
         }
-      })
+        return event;
+      });
     },
   },
 
@@ -62,6 +60,6 @@ export default {
       fetch(`http://localhost:3000/${payload.path}`)
         .then(response => response.json())
         .then(cards => commit(payload.type, cards));
-    }
+    },
   },
 };
