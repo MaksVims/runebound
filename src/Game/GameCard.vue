@@ -1,17 +1,13 @@
 <template>
   <article class="game-card">
-    <img :src="src" :alt="card.title" class="game-card-img" />
-
-    <template v-if="active">
-      <div class="card-popup">
-        
-      </div>
-    </template>
+    <img :src="src" :alt="card.title" class="game-card-img" @click="emmiter" />
 
   </article>
 </template>
 
 <script>
+import { EventEmmiter } from "../main";
+
 export default {
   name: "GameCard",
   props: {
@@ -19,13 +15,20 @@ export default {
       type: Object,
       required: true
     },
-    src: String
+    src: String,
+    type: String
   },
 
   data() {
     return {
       active: false
     };
+  },
+
+  methods: {
+    emmiter() {
+      EventEmmiter.$emit("showCard", {card: this.card, type: this.type});
+    }
   }
 };
 </script>
@@ -35,7 +38,7 @@ export default {
   width: 150px;
   height: 200px;
   cursor: pointer;
-  transition: transform .3s linear;
+  transition: transform 0.3s linear;
 
   &:hover {
     transform: scale(1.5);

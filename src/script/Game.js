@@ -14,4 +14,8 @@ export default class Game {
   nextTurn() {
     this.turn += 1;
   }
+
+  deleteEvent(id) {
+    this.globalEvent = this.globalEvent.filter(event => event.id !== id);
+  }
 }

@@ -3,26 +3,7 @@
     <h2>Выбери сюжет игры</h2>
     <div class="typeGame-list">
       <article class="typeGame-choise" v-for="(type,idx) of types" :key="idx">
-        <div
-          class="flip-container"
-          ontouchstart="this.classList.toggle('hover');"
-          @click="toggleClass"
-        >
-          <div class="flipper">
-            <img
-              :src="`/img/content/typeGame/${type}_1.png`"
-              :alt="type"
-              class="typeGame-item front"
-              @dblclick="startGame(type)"
-            />
-            <img
-              :src="`/img/content/typeGame/${type}_2.png`"
-              :alt="type"
-              class="typeGame-item back"
-              @dblclick="startGame(type)"
-            />
-          </div>
-        </div>
+        <FlipperCard :type="type" :parentMethod="toggleClassClick" @dblclick="startGame(type)" />
         <br />
         <button class="btn green" @click="startGame(type)">Выбрать</button>
       </article>
@@ -32,26 +13,31 @@
 
 
 <script>
+import FlipperCard from "../components/FlipperCard";
+
 export default {
+  components: {
+    FlipperCard
+  },
+
   data() {
     return {
-      types: ['necromant', 'dragon'],
+      types: ["necromant", "dragon"]
     };
   },
 
-
   methods: {
     startGame(type) {
-      this.$store.commit('setTypeGame', type);
+      this.$store.commit("setTypeGame", type);
     },
 
-    toggleClass(event) {
-      const target = event.target.closest('.flip-container');
+    toggleClassClick() {
+      const target = event.target.closest(".flip-container");
       if (target) {
-        target.classList.toggle('active');
+        target.classList.toggle("active");
       }
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -64,17 +50,5 @@ export default {
   .typeGame-choise {
     margin-bottom: 50px;
   }
-
-  .flip-container.active .flipper {
-    transform: rotateY(180deg);
-  }
-}
-
-.typeGame-item {
-  width: 300px;
-  height: 200px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: transform 0.4s linear;
 }
 </style>

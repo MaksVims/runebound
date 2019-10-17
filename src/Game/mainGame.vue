@@ -5,6 +5,7 @@
     <GameMiddle :game="game" />
     <GameBottom :game="game" />
 
+    <PopupGameCard />
     <button class="btn" @click="nextTurn">Конец хода</button>
   </div>
 </template>
@@ -12,15 +13,18 @@
 
 <script>
 import randomElement from '../script/randomElement';
+
 import GameTop from './GameTop';
 import GameMiddle from './GameMiddle';
 import GameBottom from './GameBottom';
+import PopupGameCard from '../components/PopupGameCard';
 
 export default {
   components: {
     GameTop,
     GameMiddle,
     GameBottom,
+    PopupGameCard,
   },
 
   data() {
@@ -35,7 +39,6 @@ export default {
       this.$store.commit('callMethodGame', {method: 'nextTurn'})
       if (eventTurn.includes(this.game.turn)) {
         const randomEvent = randomElement(this.$store.getters.getAllEvents);
-        // Todo -- не изменяет state игры через мутацию
         this.$store.commit('callMethodGame', {method: 'createEvent', value: randomEvent})
         this.$store.commit('addedUsedCards', { type: 'usedGlobalEvents', item: randomEvent });
       }

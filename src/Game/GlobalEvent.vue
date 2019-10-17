@@ -7,6 +7,7 @@
         :key="event.id"
         :card="event"
         :src="`/img/content/globalEvent/${event.type}_${event.id}.png`"
+        type='event'
         class="card-event"
       />
     </div>

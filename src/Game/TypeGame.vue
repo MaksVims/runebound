@@ -1,10 +1,12 @@
 <template>
-  <article class="game-typeGame">
-    <h3>{{getTitle | filterType}}</h3>
+  <article class="game-typeGame" >
+    <h3 @click="showCardType">{{getTitle | filterType}}</h3>
   </article>
 </template>
 
 <script>
+import { EventEmmiter } from "../main";
+
 export default {
   computed: {
     getTitle() {
@@ -20,11 +22,25 @@ export default {
       }
     },
   },
+
+  methods: {
+    showCardType() {
+      EventEmmiter.$emit("showCard", {card: {title:this.getTitle}, type: 'typeGame'});
+    }
+  },
+
 };
 </script>
 
 <style lang="scss">
+
 .game-typeGame {
   color: #fff;
+
+  h3 {
+    cursor: pointer;
+  }
+  
 }
+
 </style>
